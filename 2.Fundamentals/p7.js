@@ -28,6 +28,15 @@ else{
     console.log('false')
 }
 
+console.log(`\n`)
+
+let f=45;
+if(f<22){
+    console.log(`condition is true`)
+} else{
+    console.log(`invalid`)
+}
+
 /* 
     if(cond){
         true

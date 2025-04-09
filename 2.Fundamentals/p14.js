@@ -19,8 +19,7 @@
      }
   2.call
      value
-     reference
-     through event 
+     through event (event attributes)
      through event listeneers
      through dom
 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>open() (tab and window)</h1>
+    <button onclick="tabhandler()">open tab</button> 
+
+        <hr>
+
+    <button onclick="Windowhandler()">open window</button>
+    <script>
+        function tabhandler(){
+            // open only url
+            open("https://google.com")
+
+        }
+        function Windowhandler(){
+            open("https://flipkart.com","sample window name","width=400;height=400")
+        }
+    </script>
+</body>
+</html>

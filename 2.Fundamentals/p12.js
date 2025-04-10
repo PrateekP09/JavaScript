@@ -23,7 +23,7 @@ users.forEach(function(val,index){
     document.writeln(`<h1> ${val.id} ${val.name}</h1>`)
     document.writeln(`<h1> ${val.email}</h1>`)
 
-})
+});
 
 // array using constructor
 
@@ -43,6 +43,10 @@ course[1]={
 };
 console.log(`course=`,course)
 
-//  array using parameter
+//  array using parameterized constructor
 var bikes= new Array({id:1, title:"hero"},{id:2,title:"tvs"},{id:3,title:"yamaha"})
 console.log(`bikes=`,bikes)
+
+
+var course = new Array({id:1,name:"monkey"})
+console.log(`course=`,course)

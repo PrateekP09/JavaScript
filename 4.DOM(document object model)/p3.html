@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            color: aqua;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Document.getElemnetbyId(id)</h1>
+
+    <button onclick="handler()">product </button>
+    <hr>
+    <div id="out"></div>
+
+    <script>
+        function handler(){
+            let x=prompt(`enter number x:`)
+            let y=prompt(`enter number y:`)
+            let res= x*y;
+            document.getElementById("out").innerHTML=`<h1> product =${res}.</h1>`
+        }
+    </script>
+</body>
+</html>

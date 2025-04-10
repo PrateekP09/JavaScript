@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Confirm</h1>
+    <button onclick="handler()">Logout</button>
+
+    <script>
+        // prompt used to get user concent -> delete, logout, update, submit.
+
+        function handler(){
+            if(confirm(`Are you sure to logout`)){
+                alert(`logout successful`)
+            } else{
+                alert(`alert terminated`)
+            }
+        }
+    </script>
+</body>
+</html>

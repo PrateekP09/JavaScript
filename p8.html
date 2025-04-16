@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>document.getElementsByName("name")</h1>
+
+    <form >
+        <div> 
+            <label for="lang">choose program languages</label>
+
+            <label>
+                <input type="checkbox" name="lang" id="lang" value="ka">kannada
+            </label>
+            <label>
+                <input type="checkbox" name="lang" id="lang" value="eng">English
+            </label>
+            <label>
+                <input type="checkbox" name="lang" id="lang" value="Hin">Hindi
+            </label>
+            <label>
+                <input type="checkbox" name="lang" id="lang" value="ta">Tamil
+            </label>
+            <label>
+                <input type="checkbox" name="lang" id="lang" value="te">Telugu
+            </label>
+        </div>
+
+    </form>
+    <hr>
+    <button onclick="handler()">click me</button>
+
+    <script>
+        function handler(){
+            let els = document.getElementsByName("lang")
+            console.log("values=",els)
+            console.log("values=",els.length)
+            let data=[]
+
+
+            els.forEach(function(item,index){
+                console.log("items=",item.checked)
+                if(item.checked){
+                    data.push(item.value)
+                    
+                }
+                document.writeln("all check values=", data)
+
+            })
+
+        }
+    </script>
+</body>
+</html>

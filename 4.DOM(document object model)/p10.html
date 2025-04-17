@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>document.getElementByClassName(class)</h1>
+
+    <section>
+        <div>
+            <p>sample paragraph text</p>
+            <p>sample paragraph text</p>
+            <p class="p1">sample paragraph text</p>
+            <p>sample paragraph text</p>
+            <p>sample paragraph text</p>
+            <p class="p1">sample paragraph text</p>
+        </div>
+
+        <hr>
+
+        <main>
+            <p>sample paragraph text</p>
+            <p>sample paragraph text</p>
+            <p class="p1">sample paragraph text</p>
+            <p>sample paragraph text</p>
+            <p>sample paragraph text</p>
+            <p class="p1">sample paragraph text</p>
+        </main>
+        <hr>
+        <button onclick="handler()">click me</button>
+
+        <script>
+            function handler(){
+                let p1El= document.getElementsByClassName("p1");
+                console.log('p1El=',p1El)
+                
+                let i=0 
+                while(i< p1El.length){
+                    p1El[i].style.color="green"
+                    p1El[i].style.fontsize="20px"
+                    p1El[i].style.textAlign="center"
+                    i++
+                }
+            }
+        </script>
+    </section>
+</body>
+</html>

@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>document.cokie</h1>
+    <h1>document.cookie</h1>
     <!-- cookie is a browser variable,
         create cookie , read cookie, delete cookie -->
 
@@ -21,6 +21,7 @@
         </div>
     </form>
     <h1 id="output"></h1>
+    <button onclick="deleteCookie()">Delete Cookie</button>
 
     <script>
         let userEl = document.getElementById("user")
@@ -31,7 +32,7 @@
             let user = userEl.value;
             console.log(`new user = `, user)
 
-            document.cookie = username=`{user};expires=19 April 2025 16:30:00 PM GMT+5.30; SameSite=None; Secure`;
+            document.cookie = username=${user};expires=${new Date().toLocaleString()}; SameSite=None; Secure;
             alert("cookie set successfully")
             window.location.reload(); // reload current page
         }
@@ -47,6 +48,16 @@
             }
         }
         readHandler()
+
+        function deleteCookie(){
+            if(confirm(`Do you wish to delete cookie`)){
+                let today = new Date()
+                today.setTime(today.getTime()-1)
+                document.cookie = `username=; expires=${today.toGMTString()}`
+                alert("Cookie deleted Successfully")
+                window.location.reload();
+            }
+        }
     </script>
 </body>
 </html>

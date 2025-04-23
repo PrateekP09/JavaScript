@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blk{
+            padding: 20px;
+            border: 2px solid grey;
+        }
+    </style>
+</head>
+<body>
+    <h1>mouse events</h1>
+    <h3>onmousein and ounmouseout</h3>
+
+    <!-- 
+        onmousemove
+        onmouseover
+        onmouseleave
+        onmouseout
+        onmousedown
+        onmouseup
+
+        deprearted events
+        onmousein
+        onmousewheel
+    -->
+
+
+
+    <div class="blk" onmouseup="handler1()" onmousedown="handler2()">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima veniam dolorem animi laborum ad consectetur, perferendis incidunt, eaque odit voluptatem porro sapiente ut quasi omnis atque, odio voluptates iusto. Sint.
+        Non similique mollitia ipsam ratione totam laborum esse ipsum, accusantium iste est. Minima labore repellat sapiente voluptates necessitatibus nisi sequi architecto eaque, commodi ullam, quis nulla doloremque, alias consequuntur quae?
+        Iusto adipisci ullam vero quaerat unde, est aliquid harum, porro nihil, facere ea enim reiciendis neque ad sit sint officia. Quae voluptates officia pariatur repellat iure deserunt? Saepe, dicta ut!
+        Dignissimos quasi minima impedit harum. Eaque in enim nostrum aut velit nulla atque similique, impedit voluptate ducimus repudiandae quod id sit voluptates! In reiciendis dolore eos deleniti ut consectetur! Esse.
+        Beatae expedita maxime ea officia ullam odit suscipit deleniti ratione maiores blanditiis quas quia placeat, sed sequi corrupti distinctio? Aliquid ex ad corporis tempora et, placeat labore architecto quibusdam minus?</p>
+    </div>
+    <script>
+        let bk = document.querySelector(".blk")
+        function handler1(){
+            bk.style.backgroundColor ="green";
+            bk.style.Color ="white";
+        }
+        function handler2(){
+            bk.style.backgroundColor= "orange";
+            bk.style.Color= "white"
+        }
+    </script>
+</body>
+</html>

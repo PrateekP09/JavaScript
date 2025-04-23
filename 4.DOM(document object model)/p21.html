@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blk{
+            height: 200px;
+            width: 300px;
+            background-color: slateblue;
+            color: #ffff;
+            padding: 20px 30px 40px 50px;
+            margin: 10px 15px 20px 25px;
+            text-align: justify;
+            justify-content: center;
+            border: 6px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1> clientHeight, clientWidth, clientTop, clientLeft</h1>
+
+    <div class="blk">
+        <h3>block heading</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, quaerat! Magni magnam doloribus sunt error ab perferendis, harum cupiditate veniam vero corrupti officia iste explicabo rerum velit totam, adipisci eius?
+        Veniam numquam, sit harum cupiditate consequatur repellendus iste ipsam ipsa, vel rerum ut aspernatur earum voluptate delectus, quia distinctio sint odit eveniet mollitia saepe repudiandae sapiente aliquid soluta beatae! Quod.
+        Aliquid, earum quod iure sit cumque, asperiores dignissimos eum totam at doloremque nesciunt expedita molestias! Voluptatum quod, ipsam provident debitis ad, earum deserunt vel nesciunt quas enim, possimus tempore quos!</p>
+    </div>
+
+    <script>
+        let x=document.querySelector(".blk");
+        console.log(`client height=`, x.clientHeight);/* height+paddingTop+paddintVottom */
+        console.log(`clientWidth=`,x.clientWidth);  /* height+paddingRight+paddinRight */
+
+        console.log(`clientTop=`, x.clientTop)/* border top */
+        console.log(`clientLeft=`, x.clientLeft)/* borderleft */
+    </script>
+</body>
+</html>

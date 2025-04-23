@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>media events</h1>
+
+    <h2 id="out"></h2>
+
+    <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" width="500" height="300" controls onplay="playhan()" onpause="pausehan()" onvolumechange="volhan()" onseeked="onseekhan()"></video>
+
+    <script>
+        var msg= document.getElementById("out");
+
+        function playhan(){
+            msg.innerText="started playing video ";
+            msg.style.color="green";
+
+        }
+        function pausehan(){
+            msg.innerText="video paused";
+            msg.style.color="blue"
+        }
+        function volhan(){
+            msg.innerText="volume is changing";
+            msg.style.color="red";
+        }
+        function onseekhan(){
+            msg.innerText="video timing is changing";
+            msg.style.color="yellow";
+        }
+    </script>
+</body>
+</html>

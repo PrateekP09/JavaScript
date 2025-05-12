@@ -1,7 +1,7 @@
 // custom constructor 
 
 /* 
-    1. cnstructor follows function structure
+    1. constructor follows function structure
     2. First letter uppercase (not mandatory)
     3. constructor can't return
 */

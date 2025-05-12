@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .success{ color: green;}
+        .error{ color: red;}
+    </style>
+</head>
+<body>
+    <h1>test()</h1>
+   
+    <form action="" onsubmit="submithandler(event)" method="post">
+        <div>
+            <label for="inp">Your input</label>
+            <input type="text" name="inp" id="inp" required>
+        </div>
+
+        <div>
+            <input type="submit" value="send">
+        </div>
+    </form>
+
+    <div id="output"></div>
+
+    <script>
+        let inpEl= document.getElementById("inp")
+        let outEl= document.getElementById("output")
+
+        function submithandler(e){
+            e.preventDefault(); // avoids page refresh after event execution
+            let data= inpEl.value;
+            console.log(`data=`, data)
+            
+            let regex= /[a-z]/;
+
+            if(regex.test(data)){
+                outEl.innerHTML= `<h3 class= "success"> matches & input is ${data} </h3>` 
+                inpEl.value= ""
+            }else{
+                outEl.innerHTML= `<h3 class= "error"> not matches & input is ${data} </h3>`
+                inpEl.value= ""
+            }
+        }
+    </script>
+</body>
+</html>

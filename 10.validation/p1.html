@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>validating name</h1>
+        </div>
+
+        <div class="card">
+            <form autocomplete="off" method="post" onsubmit="submithandler(event)"></form>
+            <form action="">
+                <div class="form-item">
+                    <label for="name">your name</label>
+                    <input type="text" name="name" id="name" class="form"></input>
+                </div>
+                <div class="form-item">
+                    <input type="submit" value="submit" class="btn success">
+                    <input type="reset" value="clear" class="btn danger">
+                </div>
+            </form>
+
+            <div id="status"></div>
+        </div>
+    </div>
+    <link rel="stylesheet" href="./p1.js">
+</body>
+</html>

@@ -73,6 +73,17 @@ function createTransaction (val) {
     window.location.reload() // refresh the current page
 }
 
+// delete transcation
+function deleteHandler(id){
+    if(window.confirm(`Are you sure you want to delete transaction ${id}`)){
+        let trIndex = data.findIndex(item => Number(item.id) === Number(id))
+        data.splice(trIndex,1)
+        localStorage.setItem("transactions",JSON.stringify(data))
+        alert("transaction is deleted")
+        window.location.reload()
+    }
+}
+
 // print the transactions
 function printTransaction(val) {
      val.forEach(function(item){
@@ -85,7 +96,7 @@ function printTransaction(val) {
                                       <span class="btn edit" onclick="edithandler('${item.id}')">
                                             <i class="fa-solid fa-pen-to-square"></i>
                                       </span>
-                                      <span class="btn delete">
+                                      <span class="btn delete" onclick= "deleteHandler('${item.id}')">
                                             <i class="fa-solid fa-trash"></i>
                                       </span>
                                  </div>
